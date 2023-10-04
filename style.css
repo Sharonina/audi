@@ -150,7 +150,7 @@ main section .media-content .big-btn:hover {
 main .product-section {
   position: relative;
   width: 100vw;
-  height: 50vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -199,6 +199,10 @@ main .actions-grid .action .small-btn {
 }
 
 @media screen and (max-width: 790px) {
+  main .product-section {
+    height: 50vh;
+  }
+
   main .actions-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
