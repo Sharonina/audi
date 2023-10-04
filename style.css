@@ -198,6 +198,12 @@ main .actions-grid .action .small-btn {
   color: var(--color-grey-90);
 }
 
+footer .social-media svg {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--color-white);
+}
+
 @media screen and (max-width: 790px) {
   main .product-section {
     height: 50vh;
