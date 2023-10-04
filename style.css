@@ -164,19 +164,17 @@ main .product-section .media-wrapper img {
 
 main .actions-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  /* gap: 16px; */
+  grid-template-columns: repeat(4, 1fr);
 }
 
 main .actions-grid .action {
   width: 100%;
   text-align: center;
-  padding: 16px;
+  padding: 2rem 1.3rem;
   background-color: var(--color-white);
 }
 
-main .actions-grid .action {
+main .actions-grid .action p {
   font-size: 0.8rem;
   color: var(--color-grey-90);
   margin-top: 0.5rem;
@@ -200,7 +198,12 @@ main .actions-grid .action .small-btn {
   color: var(--color-grey-90);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 790px) {
+  main .actions-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
   main .actions-grid .action:nth-child(4n-1),
   main .actions-grid .action:nth-child(4n -2) {
     background-color: var(--color-grey);
@@ -209,6 +212,11 @@ main .actions-grid .action .small-btn {
   main .actions-grid .action:nth-child(4n-1) svg,
   main .actions-grid .action:nth-child(4n -2) svg {
     fill: var(--color-white);
+  }
+
+  main .actions-grid .action:nth-child(4n-1) p,
+  main .actions-grid .action:nth-child(4n-2) p {
+    color: var(--color-white);
   }
 
   main .actions-grid .action:nth-child(4n-1) .small-btn,
