@@ -86,6 +86,10 @@ main .video-promo-section {
   align-items: center;
 }
 
+main section {
+  border-bottom: 0.5rem solid var(--color-white);
+}
+
 main section .media-wrapper {
   position: relative;
   width: 100%;
