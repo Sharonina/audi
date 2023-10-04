@@ -155,25 +155,65 @@ main .product-section {
   flex-direction: column;
   align-items: center;
 }
+
 main .product-section .media-wrapper img {
   width: 100%;
   height: 90%;
   object-fit: cover;
 }
 
-.actions-grid {
+main .actions-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 16px;
+  /* gap: 16px; */
 }
 
-.action {
+main .actions-grid .action {
   width: 100%;
   text-align: center;
   padding: 16px;
-  border: 1px solid #ccc;
+  background-color: var(--color-white);
 }
 
-@media screen and (max-width: 767px) {
+main .actions-grid .action {
+  font-size: 0.8rem;
+  color: var(--color-grey-90);
+  margin-top: 0.5rem;
+}
+
+main .actions-grid .action svg {
+  width: 3rem;
+  height: 3rem;
+  fill: var(--color-grey);
+}
+
+main .actions-grid .action .small-btn {
+  width: 10rem;
+  height: 2.3rem;
+  background: none;
+  border: 0.1rem solid var(--color-grey-90);
+  border-radius: 0.2rem;
+  font-size: 0.7rem;
+  cursor: pointer;
+  font-family: var(--font-secondary);
+  color: var(--color-grey-90);
+}
+
+@media screen and (max-width: 600px) {
+  main .actions-grid .action:nth-child(4n-1),
+  main .actions-grid .action:nth-child(4n -2) {
+    background-color: var(--color-grey);
+  }
+
+  main .actions-grid .action:nth-child(4n-1) svg,
+  main .actions-grid .action:nth-child(4n -2) svg {
+    fill: var(--color-white);
+  }
+
+  main .actions-grid .action:nth-child(4n-1) .small-btn,
+  main .actions-grid .action:nth-child(4n-2) .small-btn {
+    color: var(--color-white);
+    border: 0.1rem solid var(--color-white);
+  }
 }
