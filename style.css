@@ -15,11 +15,32 @@
   --color-grey-70: #4c4c4c;
   --color-grey-80: #333;
   --color-grey-90: #1a1a1a;
-  --font-base: "Delius Unicase", serif;
+  --font-base: "Delius Unicase", sans-serif;
   --font-secondary: "Montserrat", sans-serif;
   --font-weight-bold: 700;
   --font-weight-light: 200;
   --font-weight-normal: 400;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0.3rem var(--color-white);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-grey-70);
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-grey-90);
 }
 
 * {
@@ -42,7 +63,7 @@ body {
 
 nav {
   width: 100vw;
-  height: 3rem;
+  height: 4rem;
   background-color: var(--color-white);
   display: flex;
   align-items: center;
@@ -61,15 +82,15 @@ nav a img {
 nav div .nav-btn {
   border: none;
   background: none;
-  margin: 0 0.1rem;
+  margin: 0 0.8rem;
   cursor: pointer;
   width: 2rem;
   height: 2rem;
 }
 
 nav div .nav-btn svg {
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
   fill: var(--color-black);
 }
 
@@ -183,7 +204,7 @@ main .actions-grid .action p {
 main .actions-grid .action svg {
   width: 3rem;
   height: 3rem;
-  fill: var(--color-grey);
+  fill: var(--color-grey-90);
 }
 
 main .actions-grid .action .small-btn {
@@ -198,13 +219,85 @@ main .actions-grid .action .small-btn {
   color: var(--color-grey-90);
 }
 
+main .actions-grid .action .small-btn:hover {
+  color: var(--color-grey-60);
+  border: 0.1rem solid var(--color-grey-60);
+}
+
+footer {
+  background-color: rgb(var(--color-black));
+  width: 100vw;
+  height: auto;
+}
+
+footer .accordion-button {
+  color: var(--color-white);
+  background-color: rgb(var(--color-black));
+}
+
+footer .accordion-button:hover {
+  color: var(--color-grey-40);
+}
+
+footer .accordion-button:not(.collapsed) {
+  background-color: rgb(var(--color-black));
+  color: var(--color-white);
+  outline: none;
+  box-shadow: none;
+}
+
+footer .accordion-item {
+  background-color: var(--color-grey-90);
+}
+
+footer .accordion-body li {
+  color: var(--color-white);
+  list-style: none;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+footer .accordion-body li:hover {
+  color: var(--color-grey-40);
+}
+
+footer .social-media {
+  width: 100vw;
+  height: 5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 15rem;
+}
+
 footer .social-media svg {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   fill: var(--color-white);
 }
 
+footer .social-media svg:hover {
+  fill: var(--color-grey-40);
+}
+
+footer .copy {
+  color: var(--color-white);
+  text-align: center;
+}
+
 @media screen and (max-width: 790px) {
+  nav {
+    height: 3rem;
+  }
+
+  nav div .nav-btn {
+    margin: 0 0.1rem;
+  }
+
+  nav div .nav-btn svg {
+    width: 1rem;
+    height: 1rem;
+  }
   main .product-section {
     height: 50vh;
   }
@@ -233,5 +326,15 @@ footer .social-media svg {
   main .actions-grid .action:nth-child(4n-2) .small-btn {
     color: var(--color-white);
     border: 0.1rem solid var(--color-white);
+  }
+
+  main .actions-grid .action:nth-child(4n-1) .small-btn:hover,
+  main .actions-grid .action:nth-child(4n-2) .small-btn:hover {
+    color: var(--color-grey-30);
+    border: 0.1rem solid var(--color-grey-30);
+  }
+
+  footer .social-media {
+    padding: 0 3rem;
   }
 }
